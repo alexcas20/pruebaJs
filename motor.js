@@ -1,7 +1,7 @@
 function calculoMotor(tipoNomina, fechaPrimerEmpleo, genero) {
 
     const lowerNomina = tipoNomina.toLowerCase();
-  // 1. Calcular los meses desde el primer empleo
+  // Meses desde el primer empleo
   const fechaInicial = new Date(fechaPrimerEmpleo);
   const fechaActual = new Date();
   
@@ -50,11 +50,9 @@ function calculoMotor(tipoNomina, fechaPrimerEmpleo, genero) {
 
   // Buscar el rango adecuado
   const buscarRango = (meses, tipo, nomina) => {
-    // Devuelve el último rango si no se encuentra uno exacto
+   
     const result = tipo.find(item => parseInt(item.rango) <= meses);
-    console.log(result)
-    console.log('nomina => ',nomina)
-    console.log('valor nomina =>, ', result[nomina])
+   
     return result[nomina]
   };
 
@@ -132,7 +130,4 @@ const resultado2 = calculoMotor("B", new Date("1993-12-30"), "f");
 const resultado3 = calculoMotor("C", new Date("2020-09-19"), "m");
 const resultado4 = calculoMotor("D", new Date("2019-01-15"), "m");
 
-console.log(resultado);
-console.log(resultado2);
-console.log(resultado3);
-console.log(resultado4);
+
